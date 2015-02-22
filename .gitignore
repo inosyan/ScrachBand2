@@ -1,0 +1,15 @@
+contents/_tmp
+*.sb2
+Sound Player Demo.sb2
+contents/Cell/Cell_Script.json
+contents/Logic/Logic_Script.json
+contents/SoundPlayer/SoundPlayer_Script.json
+contents/Stage/Stage_Script.json
+contents/UIParts/UIParts_Script.json
+contents/ScrollBar/ScrollBar_Script.json
+contents/Dummy/Dummy_Script.json
+contents/SoundPlayerNote/SoundPlayerNote_Script.json
+contents/Setting/Setting_Script.json
+contents/Title/Title_Script.json
+contents/Sample/Sample_Script.json
+contents/Playing/Playing_Script.json

@@ -1,0 +1,92 @@
+{
+	"costumes": [{
+			"rotationCenterY": "3",
+			"fileName": "selectorDown.png",
+			"rotationCenterX": "6"
+		},
+		{
+			"rotationCenterY": "3",
+			"fileName": "selectorUp.png",
+			"rotationCenterX": "6"
+		},
+		{
+			"rotationCenterY": "8",
+			"fileName": "loadBtn.png",
+			"rotationCenterX": "12"
+		},
+		{
+			"rotationCenterY": "8",
+			"fileName": "saveBtn.png",
+			"rotationCenterX": "8"
+		},
+		{
+			"rotationCenterY": "20",
+			"fileName": "btnOK.png",
+			"rotationCenterX": "240"
+		},
+		{
+			"rotationCenterY": "10",
+			"fileName": "loopOff.png",
+			"rotationCenterX": "10"
+		},
+		{
+			"rotationCenterY": "10",
+			"fileName": "loopOn.png",
+			"rotationCenterX": "10"
+		},
+		{
+			"rotationCenterY": "13",
+			"fileName": "playBtnOff.png",
+			"rotationCenterX": "13"
+		},
+		{
+			"rotationCenterY": "13",
+			"fileName": "playBtnOn.png",
+			"rotationCenterX": "13"
+		},
+		{
+			"rotationCenterY": "10",
+			"fileName": "drumBtnOff.png",
+			"rotationCenterX": "10"
+		},
+		{
+			"rotationCenterY": "10",
+			"fileName": "drumBtnOn.png",
+			"rotationCenterX": "10"
+		},
+		{
+			"rotationCenterY": "10",
+			"fileName": "modeCell.png",
+			"rotationCenterX": "10"
+		},
+		{
+			"rotationCenterY": "10",
+			"fileName": "modeEndLine.png",
+			"rotationCenterX": "10"
+		},
+		{
+			"rotationCenterY": "10",
+			"fileName": "modeStartLine.png",
+			"rotationCenterX": "10"
+		},
+		{
+			"rotationCenterY": "8",
+			"fileName": "zoomInBtn.png",
+			"rotationCenterX": "8"
+		},
+		{
+			"rotationCenterY": "8",
+			"fileName": "zoomOutBtn.png",
+			"rotationCenterX": "8"
+		},
+		{
+			"rotationCenterY": "8",
+			"fileName": "sampleBtn.png",
+			"rotationCenterX": "6"
+		},
+		{
+			"rotationCenterY": "8",
+			"fileName": "settingBtn.png",
+			"rotationCenterX": "8"
+		}]
+}

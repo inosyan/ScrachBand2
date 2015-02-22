@@ -1,0 +1,9 @@
+{
+	"currentCostumeIndex": 0,
+	"tempoBPM": 60,
+	"info": {
+		"hasCloudData": false,
+		"videoOn": false
+	},
+	"videoAlpha": 0.5
+}

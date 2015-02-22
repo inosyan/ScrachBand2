@@ -1,0 +1,37 @@
+{
+	"costumes": [{
+			"rotationCenterY": "180",
+			"fileName": "sampleBknd.png",
+			"rotationCenterX": "240"
+		},
+		{
+			"rotationCenterY": "10",
+			"fileName": "settingCancel.png",
+			"rotationCenterX": "37"
+		},
+		{
+			"rotationCenterY": "6",
+			"fileName": "sampleLoadBtn.png",
+			"rotationCenterX": "9"
+		},
+		{
+			"rotationCenterY": "7",
+			"fileName": "samplePlayBtnOff.png",
+			"rotationCenterX": "7"
+		},
+		{
+			"rotationCenterY": "7",
+			"fileName": "samplePlayBtnOn.png",
+			"rotationCenterX": "7"
+		},
+		{
+			"rotationCenterY": "10",
+			"fileName": "arrowLeft.png",
+			"rotationCenterX": "10"
+		},
+		{
+			"rotationCenterY": "10",
+			"fileName": "arrowRight.png",
+			"rotationCenterX": "10"
+		}]
+}

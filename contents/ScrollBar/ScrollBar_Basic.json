@@ -1,0 +1,13 @@
+{
+	"direction": 90,
+	"isDraggable": false,
+	"indexInLibrary": 6,
+	"scratchX": 0,
+	"spriteInfo": {
+	},
+	"scratchY": 0,
+	"currentCostumeIndex": 4,
+	"visible": false,
+	"scale": 1,
+	"rotationStyle": "leftRight"
+}

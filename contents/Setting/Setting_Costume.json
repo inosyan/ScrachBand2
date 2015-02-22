@@ -1,0 +1,37 @@
+{
+	"costumes": [{
+			"rotationCenterY": "180",
+			"fileName": "settingBknd.png",
+			"rotationCenterX": "240"
+		},
+		{
+			"rotationCenterY": "10",
+			"fileName": "settingCancel.png",
+			"rotationCenterX": "37"
+		},
+		{
+			"rotationCenterY": "10",
+			"fileName": "settingMinumumBeat.png",
+			"rotationCenterX": "97"
+		},
+		{
+			"rotationCenterY": "10",
+			"fileName": "settingOk.png",
+			"rotationCenterX": "37"
+		},
+		{
+			"rotationCenterY": "3",
+			"fileName": "selectorDown.png",
+			"rotationCenterX": "6"
+		},
+		{
+			"rotationCenterY": "3",
+			"fileName": "selectorUp.png",
+			"rotationCenterX": "6"
+		},
+		{
+			"rotationCenterY": "10",
+			"fileName": "settingMaxTrackNumber.png",
+			"rotationCenterX": "97"
+		}]
+}

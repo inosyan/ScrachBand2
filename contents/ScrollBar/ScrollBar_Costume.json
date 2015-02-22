@@ -1,0 +1,42 @@
+{
+	"costumes": [{
+			"fileName": "arrowDown.png",
+			"rotationCenterX": "0",
+			"rotationCenterY": "0"
+		},
+		{
+			"fileName": "arrowUp.png",
+			"rotationCenterX": "0",
+			"rotationCenterY": "0"
+		},
+		{
+			"fileName": "barV.png",
+			"rotationCenterX": "0",
+			"rotationCenterY": "0"
+		},
+		{
+			"fileName": "tabV.png",
+			"rotationCenterX": "0",
+			"rotationCenterY": "0"
+		},
+		{
+			"fileName": "arrowLeft.png",
+			"rotationCenterX": "0",
+			"rotationCenterY": "0"
+		},
+		{
+			"fileName": "arrowRight.png",
+			"rotationCenterX": "0",
+			"rotationCenterY": "0"
+		},
+		{
+			"fileName": "barH.png",
+			"rotationCenterX": "0",
+			"rotationCenterY": "0"
+		},
+		{
+			"fileName": "tabH.png",
+			"rotationCenterX": "0",
+			"rotationCenterY": "0"
+		}]
+}
