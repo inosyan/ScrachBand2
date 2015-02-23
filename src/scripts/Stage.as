@@ -1,6 +1,4 @@
 
-import flash.net.dns.AAAARecord;
-
 // 仮
 /*
 [List(name="waitList", visible=true, x=10, y=20, width=100, height=300)]
