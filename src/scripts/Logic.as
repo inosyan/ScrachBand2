@@ -2,7 +2,7 @@
 var bin = new BinaryUtility();
 
 var cnt, cnt2, cnt3;
-var i, j, tmp, tmp2, tmp3, s;
+var i, j, k, l, m, tmp, tmp2, tmp3, s;
 var tnum, beat, note, time;
 var index, inst;
 var scaleVal;
@@ -51,6 +51,9 @@ var position1, position2, position3, position4, dataSize, sizeSub, tag;
 
 // 前回のデータ（保存したときにとっておく）
 var previousSavedData;
+
+// タイムライン延長のための一時的なリスト
+var tempListForExtends = [];
 
 function scripts(){
 	whenFlagClicked(function(){
@@ -112,7 +115,9 @@ function scripts(){
 	});
 	
 	whenIReceive(MSG_EXTEND_TIMELINE, function(){
+		createCloneOf("Wait");
 		extendTimeline();
+		broadcast(MSG_HIDE_WAIT);
 	});
 	
 	whenIReceive(MSG_SETTING_MINUMUMBEAT_CHANGED, function(){
@@ -220,6 +225,10 @@ function createTimelineList(){
 			addTo(0, join("trackTimeline", i));
 		}
 		i++;
+	}
+	deleteOf(LIST_DELETE_ALL, tempListForExtends);
+	repeat(cnt){
+		addTo(0, tempListForExtends);
 	}
 }
 
@@ -553,8 +562,8 @@ function loadData(saveData:String, minimumBeatValue:int){
 					// もしエンドタイムが長ければタイムラインを長くする
 					tmp = mathCeiling(endLineTime / DEFAULT_TIMELINE_NUMBER) * DEFAULT_TIMELINE_NUMBER;
 					if(timelineNumber < tmp){
-						horizontalScrillMax += tmp - timelineNumber;
 						timelineNumber = tmp;
+						horizontalScrillMax = timelineNumber * zoomLevel / minimumBeat - MAX_CELL_W;
 						createTimelineList();
 					}
 				}
@@ -845,7 +854,68 @@ function copyTimelineFromNewTrack(){
 }
 
 [ProcDef(fastmode="true")]
-function extendTimeline(){
+function extendTimeline(){	
+	k = 1;
+	repeat(maxTrackNumber){
+		// 一時リストにコピー
+		i = 1;
+		repeat(timelineNumber * MAX_NOTE){
+			if(k == 1){ tempListForExtends[i] = trackTimeline1[i]; }
+			if(k == 2){ tempListForExtends[i] = trackTimeline2[i]; }
+			if(k == 3){ tempListForExtends[i] = trackTimeline3[i]; }
+			if(k == 4){ tempListForExtends[i] = trackTimeline4[i]; }
+			if(k == 5){ tempListForExtends[i] = trackTimeline5[i]; }
+			if(k == 6){ tempListForExtends[i] = trackTimeline6[i]; }
+			if(k == 7){ tempListForExtends[i] = trackTimeline7[i]; }
+			if(k == 8){ tempListForExtends[i] = trackTimeline8[i]; }
+			if(k == 9){ tempListForExtends[i] = trackTimeline9[i]; }
+			if(k == 10){ tempListForExtends[i] = trackTimeline10[i]; }
+			i++;
+		}
+		
+		// 空にする
+		deleteOf(LIST_DELETE_ALL, join("trackTimeline", k));
+		// 長くする
+		m = timelineNumber + DEFAULT_TIMELINE_NUMBER;
+		m *= MAX_NOTE;
+		repeat(m){
+			addTo(0, join("trackTimeline", k));
+		}
+		
+		// 値を埋める
+		m = timelineNumber + DEFAULT_TIMELINE_NUMBER;
+		j = MAX_NOTE - 1;
+		repeat(MAX_NOTE){
+			i = 0;
+			repeat(timelineNumber){
+				index = j * m + i + 1;
+				l = j * timelineNumber + i + 1;
+				if(k == 1){ trackTimeline1[index] = tempListForExtends[l]; }
+				if(k == 2){ trackTimeline2[index] = tempListForExtends[l]; }
+				if(k == 3){ trackTimeline3[index] = tempListForExtends[l]; }
+				if(k == 4){ trackTimeline4[index] = tempListForExtends[l]; }
+				if(k == 5){ trackTimeline5[index] = tempListForExtends[l]; }
+				if(k == 6){ trackTimeline6[index] = tempListForExtends[l]; }
+				if(k == 7){ trackTimeline7[index] = tempListForExtends[l]; }
+				if(k == 8){ trackTimeline8[index] = tempListForExtends[l]; }
+				if(k == 9){ trackTimeline9[index] = tempListForExtends[l]; }
+				if(k == 10){ trackTimeline10[index] = tempListForExtends[l]; }
+				i++;
+			}
+			j--;
+		}
+		k++;
+	}
+	
+	// tempリストも長くしとく
+	i = 1;
+	repeat(DEFAULT_TIMELINE_NUMBER * MAX_NOTE){
+		addTo(0, tempListForExtends);
+		i++;
+	}
+	
+	
+	/*
 	j = MAX_NOTE - 1;
 	repeat(MAX_NOTE){
 		i = timelineNumber - 1;
@@ -865,8 +935,9 @@ function extendTimeline(){
 		}
 		j--;
 	}
+	*/
 	timelineNumber += DEFAULT_TIMELINE_NUMBER;
-	horizontalScrillMax += DEFAULT_TIMELINE_NUMBER;
+	horizontalScrillMax = timelineNumber * zoomLevel / minimumBeat - MAX_CELL_W;
 	horizontalScrollPosition++;
 }
 

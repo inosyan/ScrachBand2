@@ -349,7 +349,7 @@ function flipSub(){
 // 端っこだったらタイムラインを伸ばす
 //[ProcDef(fastmode="true")]
 function extend(posXVal:int){
-	if(timelineNumber - posXVal < 32){
+	if(timelineNumber - posXVal < DEFAULT_TIMELINE_NUMBER / 4){
 		broadcastAndWait(MSG_EXTEND_TIMELINE);
 	}
 }
