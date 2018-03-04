@@ -7,4 +7,4 @@ See also 参照
 http://scratch.mit.edu/projects/49021986/
 
 Snipetch スニペッチ
-http://www.cotera.net/software/air/Snipetch/index.html
+https://www.inosyan.com/snipetch
